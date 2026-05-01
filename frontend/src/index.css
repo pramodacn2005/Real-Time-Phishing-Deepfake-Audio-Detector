@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-dark-900 text-slate-200 font-sans antialiased;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-dark-800/80 backdrop-blur-md border border-slate-700/50 rounded-xl shadow-xl;
+  }
+  
+  .btn-primary {
+    @apply px-4 py-2 bg-cyber-blue hover:bg-blue-600 text-white rounded-lg font-medium transition-all duration-200 active:scale-95 shadow-lg shadow-blue-500/20;
+  }
+  
+  .btn-danger {
+    @apply px-4 py-2 bg-cyber-red hover:bg-red-600 text-white rounded-lg font-medium transition-all duration-200 active:scale-95 shadow-lg shadow-red-500/20;
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2 bg-dark-700 hover:bg-slate-600 text-white rounded-lg font-medium transition-all duration-200 active:scale-95 border border-slate-600;
+  }
+
+  .input-field {
+    @apply w-full bg-dark-900 border border-slate-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyber-blue focus:border-transparent transition-all;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
